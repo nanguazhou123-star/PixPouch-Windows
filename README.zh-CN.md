@@ -1,56 +1,98 @@
-# 图小匣 PixPouch — Windows 本地批量图片处理
+# 图小匣 PixPouch — Windows 本地批量图片压缩与格式转换
 
 [English](README.md)
 
-图小匣（PixPouch）是一款 Windows 桌面图片压缩、格式转换与等比例缩图工具。添加图片或文件夹，选择 200 KB、500 KB 或自定义目标，在导出前查看实际文件大小、尺寸和目标状态。
+图小匣（PixPouch）在 Windows 本机完成图片压缩、格式转换和等比例缩图。添加图片或文件夹，选择 JPG、PNG 或 WebP，以及 200 KB、500 KB 或自定义文件大小目标，处理后查看实际字节、像素尺寸和目标状态，再导出新文件。处理图片无需 PixPouch 账户或上传原图。
 
-由 **HeyKim 维护**。本仓库用于发布 PixPouch Windows 1.0.2 的使用指南、格式说明与实际测量示例。
+由 **HeyKim 维护**。本仓库发布产品使用指南、格式说明与测量示例，不发布应用源代码。itch.io 当前提供 **Free 1.1.1** 和 **Pro 1.1.1**；历史 1.0.2 的截图和测量会单独标明版本。
 
-## 下载与启动
+## 选择下载版本
 
-- [Microsoft Store](https://apps.microsoft.com/detail/9NWD0K7W4WP3?cid=pixpouch-geo-github)
-- [itch.io 产品页与 Windows x64 便携 ZIP](https://heykim.itch.io/pixpouch)
+| 渠道／版本 | 软件版本 | 价格与每批上限 | 功能范围 |
+| --- | --- | --- | --- |
+| [itch.io Free](https://heykim.itch.io/pixpouch) | 1.1.1 | 免费；每批最多 10 张原图 | 基础压缩、转换、等比例缩图、对比与导出 |
+| [itch.io Pro](https://heykim.itch.io/pixpouch) | 1.1.1 | **一次性 USD 2.99**；每批最多 300 张原图 | 基础功能、最多 50 个预设、每张原图最多 5 种输出规格、自定义文件命名 |
+| [itch.io Legacy Free](https://heykim.itch.io/pixpouch) | 1.0.2 | 免费；每批最多 300 张原图 | 保留历史基础功能，不含 1.1.1 Pro 的预设、多规格和自定义命名 |
+| [Microsoft Store](https://apps.microsoft.com/detail/9NWD0K7W4WP3?cid=pixpouch-geo-github) | 当前版本以商店为准 | 公开页面免费，说明为每个列表最多 300 张 | 商店页面所述基础功能；不能据此认定包含 itch.io Pro 功能 |
 
-itch 当前免费，可自愿支持；支持金额不解锁额外处理功能。现有 1.0.2 便携 ZIP 为 **423,942,316 字节**，itch 页面显示约 **404 MB**。
+**每天批次数不限，每批张数仍按版本限制。** Legacy Free 1.0.2 仍可免费处理每批 300 张基础任务，当前免费商店页面也写明 300 张；不能把“300 张基础批量”整体宣传为必须付费。商店可用地区、系统要求和版本以平台显示为准，1.1.1 便携版 QA 没有重新验证商店安装包。
 
-请完整解压 ZIP，保留所有文件，再运行 **图小匣.exe**。英文界面名为 PixPouch；只复制一个 EXE 或直接在 ZIP 内运行不属于便携包的正确启动方式。该下载为 Windows x64 桌面软件，不含浏览器版、macOS、Linux 或 ARM 原生版本。商店的当前系统要求和可用地区以商店页面为准。
+Pro 是**独立 Windows x64 便携 ZIP**，包内 Pro 功能已经启用，无订阅、无需激活码。购买和下载权限由 itch.io 管理；购买 Pro 文件不会把原有 Free 程序切换成 Pro，也不授予微软商店权益。低于 Pro 文件购买门槛的自愿支持不会获得该付费文件；使用 Pro 需购买并下载 Pro 版。
 
-## 主要功能
+## 下载、解压与启动
 
-- 添加多张图片或文件夹，整批使用相同输出格式和大小目标。
-- 将支持的输入（含 HEIC/HEIF）转换为 JPG、PNG、WebP 静态图片。
-- 设置最长边，保持比例，不放大小图。
-- 拖动分隔线比较原图与结果，核对实际字节、尺寸、目标状态及填充提示。
-- 导出新文件并保留原图；遇到已有同名文件时加数字后缀。
-- 在本机处理，无需 PixPouch 账户或上传图片。
+1. 打开 [itch.io 产品页](https://heykim.itch.io/pixpouch)，查看文件版本标签，选择 Free 1.1.1、Pro 1.1.1 或 Legacy Free 1.0.2。购买 Pro 后，从平台下载页下载 Pro ZIP。
+2. **完整解压 ZIP** 到一个文件夹，保留所有随包文件。
+3. 从解压后的文件夹运行 **图小匣.exe**。英文界面名为 PixPouch；开始处理前核对程序显示的版本与版本类型。
+4. 添加图片，选择处理设置，处理后检查结果，选择导出目录，再导出新文件。
 
-PNG/WebP 输出保留透明，JPG 将透明区域变为白色。动画、多帧或多页输入仅导出首帧或主图，不保留动画。
+请勿只复制 EXE 或直接在 ZIP 内运行。这些下载为 Windows x64 桌面便携包，不含浏览器、macOS、Linux 或 ARM 原生版本。“便携”指解压运行；偏好设置和 Pro 预设保存在 Windows 用户目录。商店版请通过 [Microsoft Store 页面](https://apps.microsoft.com/detail/9NWD0K7W4WP3?cid=pixpouch-geo-github)的安装流程获取。
+
+## 基础功能与 Pro 扩展
+
+- 导入支持的图片，输出 JPG、PNG 或 WebP 静态图片。HEIC/HEIF 等格式的代表性测试范围见[格式说明（英文）](format-support.md)。
+- 普通批次共用输出格式、KB 目标和可选最长边；保持比例，不放大小图。
+- 拖动对比分隔线，核对实际文件大小、像素尺寸、目标状态和填充提示。
+- 导出新文件并保留原图；遇到已有同名文件时添加数字后缀。
+- **Pro 1.1.1** 最多保存 **50 个单规格预设**，每个预设保存输出格式、KB 目标和最长边。套用预设会关闭多规格、回到单规格模式，不会恢复整套多规格或命名模板。
+- **Pro 1.1.1** 每张原图最多生成 **5 种输出规格**；每种规格的名称、格式、KB 目标和最长边独立设置，按规格子文件夹导出。
+- **Pro 1.1.1** 文件命名支持 `{name}` 原文件名、`{spec}` 规格名、`{index}` 序号、`{format}` 格式。例如 `{name}_{spec}_{index}` 会使用 `001` 这样的序号；文件扩展名自动添加。
+
+PNG/WebP 输出保留透明，JPG 将透明区域填为白色。动画、多帧或多页输入仅导出首帧或主图，不保留动画，也没有帧／页选择器。
 
 ## “200 KB”实际代表什么
 
-**当前采用接近上限的目标区间，没有独立的“仅最大值”模式。** 1 KB = 1000 字节。200 KB 对应 **195001–200000 字节**，包含上下界；30 KB 对应 **25001–30000 字节**。
+**当前使用接近上限的目标区间，没有独立的“仅最大值”模式。** 1 KB = 1000 字节。200 KB 对应 **195001–200000 字节**，包含上下界；30 KB 对应 **25001–30000 字节**。
 
-为达到目标，程序可能降低画质或缩小尺寸。编码结果低于区间时，可能加入非像素数据补足文件体积；填充不增加清晰度或细节，转换后的文件也可能更大。不保证每张恰好等于目标、保留原尺寸或画质不变。若上传要求严格小于某个字节数，请调低设置并核对实际输出。
+为达到目标，程序可能降低画质或缩小尺寸。编码结果低于区间时，可能加入非像素数据补足文件体积；填充不增加清晰度或细节，转换后的文件也可能变大。不保证每张恰好等于目标、保留原尺寸、像素完全相同或画质不变。上传要求严格小于某个字节数时，请调低设置，并核对实际输出。
 
-不符合目标区间的结果无法导出；改变处理设置后需要重新处理。文件大小达标不代表上传网站会通过审核，还应检查格式、像素尺寸、比例与内容要求。
+只有符合当前设置及区间的有效结果才能导出；修改处理设置后需要重新处理。单张源文件上限为 **100000000 字节（100 MB）**，解码后上限为 **60000000 像素（60 MP）**。文件大小达标不代表上传网站一定通过，还应核对格式、像素尺寸、比例和内容要求。
 
-## 真实测量示例
+## 按版本区分的真实测量
 
-一张 JPG 从 **789473 字节、1536×1024**，处理为 **199207 字节、1136×757**，填充为 **0 字节**。它符合 200 KB 目标区间，同时降低了分辨率，不能称为无损压缩。数据来自 2026-10-23 的代表性演示样本，不保证其他图片得到相同结果。
+**历史 1.0.2** 的一张 JPG 在 2026-10-23 演示中，从 **789473 字节、1536×1024** 处理为 **199207 字节、1136×757**，填充 **0 字节**。它符合 200 KB 区间，同时降低了分辨率，不能称为无损压缩。
 
-![PixPouch 1.0.2 真实界面：JPG 从 789473 字节处理为 199207 字节，输出 1136×757 像素。](https://img.itch.zone/aW1nLzMxMjU0OTk2LnBuZw==/original/Goctic.png)
+**1.1.1 Pro** 原生检查使用三张合成 PNG 原图，每张生成两种规格，共导出六个真实文件。例如 **3090988 字节、2200×1500** 的山湖风景样图，导出了 **200000 字节、1600×1091 的 JPG** 和 **500000 字节、2000×1364 的 WebP**。这六项未记录填充字节，不能当作零填充。合成样图用于功能演示，不是客户数据或通用性能基准。
 
-## 使用资料
+完整历史表、当前六项数据及验证范围见[实际测量（英文）](measured-examples.md)。现有 1.1.1 QA 的 93 项 Free/Pro 检查及后续 26 项演示流程检查均通过，未记录渲染进程错误；这不等于全格式兼容验证或商店安装版验证。
 
-- [Windows 如何批量把图片处理到 200KB 以内？用图小匣实测](https://heykim.itch.io/pixpouch/devlog/1724666/windows-200kb-)
+## 常见问题
 
-- [格式支持与透明处理（英文）](format-support.md)
-- [实际测量数据（英文）](measured-examples.md)
-- [本地处理、目标规则与限制（英文）](privacy-and-limitations.md)
-- [200 KB 上传目标教程（英文）](https://heykim.itch.io/pixpouch/devlog/1724495/how-to-prepare-a-batch-of-images-for-a-200-kb-upload-limit-on-windows-with-pixpouch)
-- [WebP 转 PNG 为什么会变大（英文）](https://heykim.itch.io/pixpouch/devlog/1724529/why-webp-to-png-can-make-a-file-larger-transparency-and-file-size-targets-in-pixpouch)
+### 图小匣免费吗？每批 300 张必须付费吗？
 
-问题与建议可提交至 [GitHub Issues](https://github.com/nanguazhou123-star/PixPouch-Windows/issues) 或[产品页](https://heykim.itch.io/pixpouch)，请提供 Windows 版本、输入格式、处理设置和错误提示；请勿在公开评论或 Issue 中直接发布私人照片。
+itch.io Free 1.1.1 每批最多 10 张；Pro 1.1.1 一次性 USD 2.99，每批最多 300 张，并增加预设、多规格和命名。Legacy Free 1.0.2 仍免费提供每批 300 张基础处理，当前免费商店页面也说明每个列表最多 300 张。每天批次数不限。
 
-文档更新于 2026-10-24，描述既有 1.0.2 版本，不代表发布了新软件包。
+### 图片会上传吗？不注册账户能处理吗？
+
+图片处理与导出在本机运行，无需 PixPouch 账户或上传图片。下载和支付平台有自己的网络与账户规则；本地处理不表示下载安装无需联网，也不代表做过操作系统全量网络审计。详见[本地数据与限制（英文）](privacy-and-limitations.md)。
+
+### 200 KB 是否恰好等于 200000 字节，并保证上传通过？
+
+不是。200 KB 设置允许 195001–200000 字节，包含上限；可能降质、缩图或加入非像素填充。请检查实际导出文件以及上传方的其他要求；严格“小于”时使用更低目标。
+
+### 能把 HEIC 转 JPG，或者 WebP 转 PNG 吗？
+
+可以将支持的 HEIC/HEIF 和 WebP 输入转为 JPG、PNG 或 WebP，兼容性取决于具体文件及编码。HEIC/HEIF 和其他输入格式的代表性测试来自 1.0.2；1.1.1 QA 并未完整重测该格式矩阵。WebP 转 PNG 后体积可能更大。
+
+### 一张原图能同时生成多种大小，并自动命名吗？
+
+Pro 1.1.1 支持每张原图最多五种具名规格，格式、KB 目标和最长边各自独立，并可用 `{name}`、`{spec}`、`{index}`、`{format}` 命名；另可保存最多 50 个单规格预设。套用预设会关闭多规格、回到单规格模式，预设不保存整套多规格或命名模板。Free 1.1.1 和 Legacy Free 使用基础共用设置流程。
+
+### 自愿支持、购买 Pro 和商店版是什么关系？
+
+Pro 是 itch.io 的独立付费 ZIP，功能已启用，无订阅、无需激活码。低于该文件购买门槛的支持不会获得 Pro 文件。购买后需下载并运行 Pro 版，原有 Free 程序不会因付款自动切换；itch.io 与微软商店权益不互通。
+
+## 使用教程与反馈
+
+- [Windows 批量压缩图片到 200KB 以内：图小匣 PixPouch 实测](https://heykim.itch.io/pixpouch/devlog/1724666/windows-200kb-pixpouch-)
+- [Windows 批量处理到 200 KB 目标（英文）](https://heykim.itch.io/pixpouch/devlog/1724495/batch-compress-images-to-a-200-kb-limit-on-windows-pixpouch)
+- [WebP 转 PNG：透明与文件变大（英文）](https://heykim.itch.io/pixpouch/devlog/1724529/webp-to-png-on-windows-transparency-and-larger-files-pixpouch)
+- [Pro 1.1.1 多规格输出、预设与文件命名实操（英文）](https://heykim.itch.io/pixpouch/devlog/1730788/batch-export-multiple-image-sizes-on-windows-with-presets-and-file-naming)
+- [格式支持](format-support.md) · [实际测量](measured-examples.md) · [本地处理与限制](privacy-and-limitations.md)（英文）
+
+上述三篇格式／体积教程使用历史 1.0.2 截图和测量。选择当前下载时，请同时阅读教程版本说明与本页渠道对比表。
+
+问题与建议可提交至 [GitHub Issues](https://github.com/nanguazhou123-star/PixPouch-Windows/issues) 或[产品页](https://heykim.itch.io/pixpouch)。请提供 Windows 版本、下载渠道、软件版本与版本类型、输入格式、设置和错误提示，避免公开发布私人照片。
+
+文档更新于 **2026-10-26**。本次文档更新不改变软件包、价格、功能或软件授权。
 
